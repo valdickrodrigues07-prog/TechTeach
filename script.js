@@ -1,10 +1,10 @@
 'use strict';
 
-/* ===== Edite só aqui ===== */
+/* ===== Edições ===== */
 const CONFIG = {
-  whatsapp: '',   // ex.: '(11) 99999-9999' (com ou sem +55)
+  whatsapp: '',   // ex.: '(11) 967697 6884' (com ou sem +55)
   whatsappTexto: 'Olá! Vim pelo site da Tech Teach e gostaria de saber mais.',
-  email: '',      // ex.: 'contato@seudominio.com.br'
+  email: '',      // ex.: 'Valprograming07@outlook.com'
   jogosUrl: ''    // link da página dos jogos
 };
 
