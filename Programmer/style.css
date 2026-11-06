@@ -27,6 +27,8 @@ p{max-width:60ch}
 .tr a:hover b{color:var(--hot)}
 .btn,.gh{font:700 1rem var(--f);border-radius:10px;padding:.7rem 1.1rem;cursor:pointer;text-decoration:none;display:inline-block;border:2px solid var(--hot)}
 .btn{background:var(--hot);color:var(--oh)}
+.lobby{background:#7c3aed;border-color:#7c3aed;color:#fff;margin-left:.5rem}.lobby:hover{background:#6d28d9;border-color:#6d28d9}
+:root[data-theme="dark"] .lobby{background:#a78bfa;border-color:#a78bfa;color:#1a0b3d}:root[data-theme="dark"] .lobby:hover{background:#c4b5fd;border-color:#c4b5fd}
 .gh{background:none;border-color:var(--ln);color:var(--ink)}
 :focus-visible{outline:3px solid var(--ac);outline-offset:2px}
 #lv{display:flex;flex-wrap:wrap;gap:.35rem;margin:.6rem 0 1rem}
@@ -116,3 +118,10 @@ nav.m a[aria-current]{box-shadow:none}
 #ls.ok{color:var(--ac)}#ls.no{color:var(--hot)}
 #lx{margin:.2rem 0 .8rem}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* Dicas de sintaxe, botão do Lobby e cores extras dos pinguins */
+code[data-s]{cursor:help;border-bottom:1px dotted var(--ac)}
+code[data-s]:hover{background:color-mix(in srgb,var(--ac) 18%,var(--i1))}
+#tip{position:fixed;z-index:50;max-width:min(22rem,calc(100vw - 16px));padding:.55rem .7rem;border-radius:8px;background:var(--ink);color:var(--bg);font:400 .8rem/1.45 var(--m);white-space:pre-wrap;box-shadow:0 8px 22px rgba(0,0,0,.28);pointer-events:none}
+.lb{margin-bottom:1rem;padding:.5rem .95rem;font-size:.92rem}
+.azul{--c:#2563eb}.cinza{--c:#64748b}
