@@ -1,6 +1,6 @@
 // Conecte os endereços dos jogos publicados nestas três opções.
 const GAME_LINKS = {
-  handware: "",
+  handware: "https://valdickrodrigues07-prog.github.io/TechTeach/Digita%C3%A7%C3%A3o/",
   mounthard: "",
   farheavens: ""
 };
