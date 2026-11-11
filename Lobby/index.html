@@ -5,20 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#211431">
   <meta name="description" content="Lobby de jogos educativos da TECH TEACH.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TECH TEACH — Arcade">
+  <meta property="og:description" content="Pratique tecnologia, lógica e inglês com jogos educativos da TECH TEACH.">
+  <meta property="og:locale" content="pt_BR">
+  <!-- Para a prévia com imagem ao compartilhar, adicione: <meta property="og:image" content="URL-DA-IMAGEM"> -->
   <title>TECH TEACH — Arcade</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23211431'/%3E%3Ctext x='50' y='68' font-size='54' font-family='monospace' font-weight='700' text-anchor='middle' fill='%23a9e5da'%3ETT%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Selo "Em breve" nos jogos ainda indisponíveis (pode mover para o style.css) */
+    .soon-badge {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+    .launch[aria-disabled="true"] { cursor: not-allowed; }
+  </style>
 </head>
 <body>
   <div class="shell">
     <header class="topbar">
-      <a class="brand" href="https://valdickrodrigues07-prog.github.io/TechTeach/Menu/" aria-label="TECH TEACH — voltar ao menu principal">
+      <a class="brand" href="/TechTeach/Menu/" aria-label="TECH TEACH — voltar ao menu principal">
         <span class="brand-name">TECH TEACH</span>
         <span class="brand-sub">Arcade · Jogos educativos</span>
       </a>
-      <a class="menu-btn" href="https://valdickrodrigues07-prog.github.io/TechTeach/Menu/">Menu</a>
+      <a class="menu-btn" href="/TechTeach/Menu/">Menu</a>
     </header>
 
     <main>
@@ -30,15 +47,15 @@
 
       <div class="section-head">
         <h2>Jogos disponíveis</h2>
-        <span>TECH TEACH / 04 TRILHAS</span>
+        <span>TECH TEACH / <span id="game-count">04</span> TRILHAS</span>
       </div>
 
       <section class="games" aria-label="Lista de jogos">
-        <article class="game-card handware" tabindex="0" role="button" aria-label="Selecionar trilha Handware" data-card="handware">
+        <article class="game-card handware" data-card="handware">
           <div class="card-top"><span class="category">Digitação</span><span class="index">01</span></div>
           <h3>Handware</h3>
           <p>Treine sua velocidade, precisão e familiaridade com o teclado.</p>
-          <a class="launch" href="https://valdickrodrigues07-prog.github.io/TechTeach/Digita%C3%A7%C3%A3o/" game-card="handware">Jogar Handware</a>
+          <a class="launch" href="/TechTeach/Digita%C3%A7%C3%A3o/" data-game="handware">Jogar Handware</a>
           <div class="keyboard-art" aria-hidden="true">
             <div class="keyboard-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
             <div class="keyboard-row"><i></i><i></i><i></i><i></i><i></i><i></i></div>
@@ -47,11 +64,11 @@
           </div>
         </article>
 
-        <article class="game-card teach-tux" tabindex="0" role="button" aria-label="Selecionar trilha TeachTux" data-card="teach-tux">
+        <article class="game-card teach-tux" data-card="teach-tux">
           <div class="card-top"><span class="category">Programação</span><span class="index">02</span></div>
           <h3>TeachTux</h3>
           <p>Explore lógica e programação resolvendo desafios passo a passo.</p>
-          <a class="launch" href="https://valdickrodrigues07-prog.github.io/TechTeach/Programmer/">Jogar TeachTux</a>
+          <a class="launch" href="/TechTeach/Programmer/" data-game="teach-tux">Jogar TeachTux</a>
           <svg class="tux-art" viewBox="0 0 100 125" role="img" aria-label="Ilustração simples de um pinguim">
             <ellipse cx="50" cy="67" rx="34" ry="49" fill="#17131f" stroke="#a9e5da" stroke-width="2"/>
             <ellipse cx="50" cy="72" rx="22" ry="35" fill="#f4eff7"/>
@@ -64,11 +81,11 @@
           </svg>
         </article>
 
-        <article class="game-card mount-hard" tabindex="0" role="button" aria-label="Selecionar trilha MountHard" data-card="mounthard">
-          <div class="card-top"><span class="category">Hardware</span><span class="index">03</span></div>
+        <article class="game-card mount-hard" data-card="mounthard">
+          <div class="card-top"><span class="category">Hardware</span><span class="soon-badge">Em breve</span><span class="index">03</span></div>
           <h3>MountHard</h3>
           <p>Conheça os componentes do computador e teste seus conhecimentos.</p>
-          <a class="launch shape-launch mountain-launch" href="#" data-game="mounthard" aria-label="Jogar MountHard">
+          <a class="launch shape-launch mountain-launch" href="#" data-game="mounthard" aria-disabled="true">
             <svg viewBox="0 0 270 104" aria-hidden="true"><path d="M9 94 Q8 91 12 85 L49 36 Q54 29 60 36 L82 61 Q87 67 92 60 L126 15 Q133 6 140 15 L181 64 Q186 70 192 64 L215 39 Q221 32 227 40 L258 84 Q265 94 254 94 Z" fill="#c69aff" stroke="#17111d" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/></svg>
             <span>Jogar MountHard</span>
           </a>
@@ -79,11 +96,11 @@
           </svg>
         </article>
 
-        <article class="game-card far-heavens" tabindex="0" role="button" aria-label="Selecionar trilha FarHeavens" data-card="farheavens">
-          <div class="card-top"><span class="category">English</span><span class="index">04</span></div>
+        <article class="game-card far-heavens" data-card="farheavens">
+          <div class="card-top"><span class="category">English</span><span class="soon-badge">Em breve</span><span class="index">04</span></div>
           <h3>FarHeavens</h3>
           <p>Pratique vocabulário e compreensão em desafios de inglês.</p>
-          <a class="launch shape-launch cloud-launch" href="#" data-game="farheavens" aria-label="Jogar FarHeavens">
+          <a class="launch shape-launch cloud-launch" href="#" data-game="farheavens" aria-disabled="true">
             <svg viewBox="0 0 270 104" aria-hidden="true"><path d="M58 88 C32 88 18 74 21 56 C23 40 39 31 57 36 C62 15 81 7 101 12 C117 16 127 29 129 43 C149 30 174 38 180 56 C200 45 226 55 229 74 C232 88 219 94 201 94 L61 94 Z" fill="#e6a7d8" stroke="#17111d" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/></svg>
             <span>Jogar FarHeavens</span>
           </a>
@@ -101,5 +118,13 @@
   </div>
   <div class="notice" id="notice" role="status" aria-live="polite"></div>
   <script src="script.js" defer></script>
+  <script>
+    // Atualiza o contador de trilhas conforme os cards existentes
+    (function () {
+      var el = document.getElementById("game-count");
+      var n = document.querySelectorAll(".game-card").length;
+      if (el && n) el.textContent = String(n).padStart(2, "0");
+    })();
+  </script>
 </body>
 </html>
