@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tech Teach - Games - HandHardware</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=IBM+Plex+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="w">
+<header class="top" id="topo">
+<a class="brand" href="#topo"><b>Tech Teach</b><span>Games · HandHardware</span></a>
+<nav><a href="#mouse">1 · Mouse</a><a href="#teclado">2 · Teclado</a><a href="#digitar">3 · Texto</a></nav>
+</header>
+<main>
+<section class="hero">
+<p class="kick">Informática básica, na prática</p>
+<h1>Aprenda mouse e teclado jogando.</h1>
+<p>Três jogos curtos para quem está começando no computador. No primeiro você acerta alvos com o botão esquerdo e o direito do mouse. No segundo digita palavras de informática antes que elas toquem o chão. No terceiro, digita um texto contra o relógio com um teclado desenhado na tela. Sem cadastro, sem anúncios, no seu ritmo.</p>
+<div class="tips">
+<p><b>Mão no mouse.</b> Apoie o pulso na mesa, com o indicador sobre o botão esquerdo e o dedo médio sobre o direito. O esquerdo seleciona e abre; o direito mostra o menu de opções.</p>
+<p><b>Mãos no teclado.</b> Coloque os indicadores sobre o F e o J, as duas teclas com uma marquinha em relevo. Os outros dedos alcançam o resto sem você olhar para baixo.</p>
+</div>
+</section>
+
+<section class="game" id="mouse">
+<div class="gh"><span class="num">1</span><div><h2>Caça-Cliques</h2><p>Escolha um mapa e um nível. Nos alvos livres, laranja pede o botão esquerdo e verde pede o direito. Nos outros mapas, a tarefa diz o que fazer e você decide o botão: o esquerdo abre e aperta, o direito abre o menu de opções.</p></div></div>
+<div class="modes" id="mp" role="group" aria-label="Mapa"></div><div class="modes" id="lv" role="group" aria-label="Nível"></div>
+<div class="bar hud"><svg class="mouse" id="mm" viewBox="0 0 40 56" aria-hidden="true"><path class="lb" d="M20 2A16 16 0 0 0 4 18v6h16z"/><path class="rb" d="M20 2a16 16 0 0 1 16 16v6H20z"/><path d="M4 24h32v14a16 16 0 0 1-32 0z"/></svg><span class="hint" id="mh" aria-live="polite">Escolha o modo e aperte Começar.</span><span>Etapa <b id="mn">0/10</b></span><span>Erros <b id="me">0</b></span><span>Tempo <b id="mt">0.0s</b></span></div>
+<div class="stage dots" id="ms"><div class="ov" id="mo"></div></div>
+<p class="note" id="touch" hidden>Você está num celular ou tablet: o clique direito só funciona com um mouse de verdade.</p>
+</section>
+
+<section class="game" id="teclado">
+<div class="gh"><span class="num">2</span><div><h2>Chuva de Palavras</h2><p>As palavras caem do alto. Digite cada uma antes que toque o chão; o jogo confere sozinho, sem precisar apertar Enter. Você tem 5 vidas e as palavras vêm sem acento.</p></div></div>
+<div class="bar hud"><span>Pontos <b id="tp">0</b></span><span>Vidas <b id="tl">●●●●●</b></span><span>Nível <b id="tn">1</b></span><span>Recorde <b id="tb">0</b></span></div>
+<div class="stage floor" id="ts"><div class="ov" id="to"></div></div>
+<input id="ti" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Digite aqui" aria-label="Digite a palavra que está caindo" disabled>
+</section>
+<section class="game" id="digitar">
+<div class="gh"><span class="num">3</span><div><h2>Texto Cronometrado</h2><p>Dois modos: o Curso, com 24 níveis em 6 capítulos, e o Contra o Tempo, com 30, 60 ou 120 segundos para digitar o máximo possível. Digite o texto inteiro antes que o tempo acabe. Errou uma tecla numa palavra? Ela conta como palavra errada, e cada nível aceita só algumas. O teclado desenhado mostra a próxima tecla e o dedo certo.</p></div></div>
+<div class="modes" id="dl" role="group" aria-label="Nível do texto"></div>
+<div class="bar hud"><span>Tempo <b id="dt">0 s</b></span><span>Ritmo <b id="dp">0</b> ppm</span><span>Erradas <b id="de">0/0</b></span><span class="hint" id="dh" aria-live="polite"></span></div>
+<div class="tmb"><i id="dtb"></i></div>
+<div class="stage txs" id="dst"><div class="txt" id="dtx"></div><div class="ov" id="do"></div></div>
+<div class="kbd" id="kbd" aria-hidden="true"></div>
+<p class="note" id="dnote" hidden>Este jogo precisa de um teclado de verdade; no celular, só com teclado físico.</p>
+</section>
+</main>
+<footer>Tech Teach · São Paulo · Learn. Develop. Innovate.<br>Seus recordes ficam salvos só neste navegador.</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
